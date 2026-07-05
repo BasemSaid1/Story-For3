@@ -1,0 +1,6 @@
+{
+  "name": "إلى أمنية - Omnia Keepsake",
+  "description": "صندوق ذكريات رقمي ومفاجآت تفاعلية لأمنية",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
