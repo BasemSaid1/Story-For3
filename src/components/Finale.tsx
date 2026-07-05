@@ -158,14 +158,14 @@ export default function Finale() {
   }, [isOpen]);
 
   return (
-    <div className="py-24 flex flex-col items-center justify-center bg-white border-t border-red-50">
+    <div className="py-6 sm:py-10 flex flex-col items-center justify-center w-full">
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(true)}
-        className="relative overflow-hidden group bg-[#735c00] text-white px-14 py-5 rounded-full font-amiri text-2xl font-bold shadow-2xl hover:shadow-yellow-900/20 transition-all border border-[#D4AF37] flex items-center gap-3"
+        className="relative overflow-hidden group bg-[#735c00] text-white px-8 py-4 sm:px-12 sm:py-5 rounded-full font-amiri text-xl sm:text-2xl font-bold shadow-xl hover:shadow-yellow-900/10 transition-all border border-[#D4AF37]/50 flex items-center gap-3"
       >
-        <Sparkles size={24} className="text-yellow-200 animate-pulse" />
+        <Sparkles size={20} className="text-yellow-200 animate-pulse" />
         <span className="relative z-10">مفاجأة أخيرة... اضغطي هنا ✨</span>
         <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500 rounded-full" />
       </motion.button>
@@ -177,27 +177,27 @@ export default function Finale() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="fixed inset-0 z-[100] bg-black overflow-hidden flex flex-col items-center justify-center"
+            className="fixed inset-0 z-[120] bg-black overflow-hidden flex flex-col items-center justify-center"
           >
             {/* Background Fireworks WebGL Canvas */}
             <canvas ref={canvasRef} className="absolute inset-0 w-full h-full block" />
 
             {/* Glowing Golden Content Overlay */}
-            <div className="relative z-10 text-center px-6 max-w-xl pointer-events-none">
+            <div className="relative z-10 text-center px-4 max-w-lg pointer-events-none">
               <motion.div
                 initial={{ scale: 0.3, opacity: 0, rotate: -15 }}
-                animate={{ scale: 1.1, opacity: 1, rotate: 0 }}
+                animate={{ scale: 1, opacity: 1, rotate: 0 }}
                 transition={{ 
                   type: "spring", 
                   stiffness: 120, 
                   damping: 15,
                   delay: 0.3
                 }}
-                className="mb-6"
+                className="mb-4"
               >
                 {/* Simulated beautiful calligraphy glow style */}
                 <h2 
-                  className="text-8xl sm:text-[10rem] font-amiri font-extrabold text-[#D4AF37]"
+                  className="text-6xl sm:text-8xl md:text-[9rem] font-amiri font-extrabold text-[#D4AF37]"
                   style={{
                     textShadow: "0 0 15px rgba(212, 175, 55, 0.7), 0 0 35px rgba(212, 175, 55, 0.4)",
                     fontFamily: "'Amiri', serif"
@@ -208,19 +208,19 @@ export default function Finale() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1, duration: 1 }}
-                className="flex flex-col items-center gap-4"
+                transition={{ delay: 0.8, duration: 0.8 }}
+                className="flex flex-col items-center gap-3"
               >
                 <div className="flex items-center gap-2 text-red-500 animate-pulse">
-                  <Heart size={28} className="fill-current" />
-                  <Heart size={36} className="fill-current scale-110" />
-                  <Heart size={28} className="fill-current" />
+                  <Heart size={20} className="fill-current" />
+                  <Heart size={28} className="fill-current scale-110" />
+                  <Heart size={20} className="fill-current" />
                 </div>
                 
                 <p 
-                  className="text-white font-amiri text-3xl sm:text-4xl font-bold tracking-wide leading-relaxed"
+                  className="text-white font-amiri text-2xl sm:text-3xl font-bold tracking-wide leading-relaxed px-2"
                   style={{
                     textShadow: "0 2px 10px rgba(0,0,0,0.8)"
                   }}
@@ -235,10 +235,10 @@ export default function Finale() {
               whileHover={{ scale: 1.1, rotate: 90 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsOpen(false)}
-              className="absolute top-6 right-6 z-20 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full backdrop-blur-md transition-colors border border-white/10"
+              className="absolute top-4 right-4 z-20 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-2.5 rounded-full backdrop-blur-md transition-colors border border-white/10 pointer-events-auto"
               title="إغلاق المفاجأة"
             >
-              <X size={28} />
+              <X size={24} />
             </motion.button>
           </motion.div>
         )}

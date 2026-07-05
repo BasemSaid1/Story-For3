@@ -37,41 +37,41 @@ export default function Counter() {
   return (
     <section 
       ref={containerRef}
-      className="py-32 bg-[#95002a] text-[#ffd0d2] relative overflow-hidden flex flex-col items-center justify-center border-y border-[#D4AF37]/20"
+      className="py-10 sm:py-12 px-4 bg-[#95002a] text-[#ffd0d2] relative overflow-hidden flex flex-col items-center justify-center rounded-2xl border border-[#D4AF37]/20 max-w-xl mx-auto w-full shadow-lg"
     >
       {/* Decorative floating grids in the background */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="grid grid-cols-6 sm:grid-cols-10 h-full w-full">
-          {[...Array(60)].map((_, i) => (
+        <div className="grid grid-cols-6 sm:grid-cols-8 h-full w-full">
+          {[...Array(48)].map((_, i) => (
             <div key={i} className="border-r border-b border-white/20 aspect-square" />
           ))}
         </div>
       </div>
 
-      <div className="relative z-10 text-center px-6">
+      <div className="relative z-10 text-center">
         <motion.p 
-          initial={{ opacity: 0, y: -10 }}
+          initial={{ opacity: 0, y: -5 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="font-sans text-xs uppercase tracking-widest text-[#ffdadb] mb-4 font-bold"
+          transition={{ duration: 0.5 }}
+          className="font-sans text-xs uppercase tracking-widest text-[#ffdadb] mb-2 font-bold"
         >
           لقد مرت
         </motion.p>
         
         <motion.div 
-          initial={{ scale: 0.9, opacity: 0 }}
+          initial={{ scale: 0.95, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="text-7xl sm:text-8xl md:text-9xl font-extrabold font-playfair text-white tracking-tighter mb-4 text-shadow-lg font-amiri"
+          transition={{ duration: 0.6 }}
+          className="text-5xl sm:text-7xl md:text-8xl font-extrabold font-playfair text-white tracking-tighter mb-2 text-shadow-md font-amiri"
         >
           {count.toLocaleString("ar-EG")}
         </motion.div>
         
         <motion.p 
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 5 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="font-amiri text-2xl sm:text-3xl text-yellow-100 font-bold italic"
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="font-amiri text-lg sm:text-2xl text-yellow-100 font-bold italic px-2 leading-relaxed"
         >
           يوماً منذ أن أنرتِ عالمي ❤️
         </motion.p>

@@ -4,47 +4,47 @@ import { Heart } from "lucide-react";
 
 export default function Letter() {
   return (
-    <section id="surprise" className="py-24 px-6 bg-white relative">
+    <section id="surprise" className="py-4 sm:py-8 px-4 relative w-full">
       {/* Decorative floral elements or subtle background icons */}
-      <div className="absolute top-10 right-10 text-red-50/60 pointer-events-none">
-        <Heart size={120} className="fill-current stroke-none rotate-12" />
+      <div className="absolute top-4 right-4 text-red-50/40 pointer-events-none">
+        <Heart size={64} className="fill-current stroke-none rotate-12" />
       </div>
-      <div className="absolute bottom-10 left-10 text-red-50/40 pointer-events-none">
-        <Heart size={180} className="fill-current stroke-none -rotate-12" />
+      <div className="absolute bottom-4 left-4 text-red-50/30 pointer-events-none">
+        <Heart size={80} className="fill-current stroke-none -rotate-12" />
       </div>
 
       <motion.div 
-        initial={{ opacity: 0, scale: 0.95, y: 30 }}
+        initial={{ opacity: 0, scale: 0.95, y: 20 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
-        className="max-w-3xl mx-auto bg-gradient-to-b from-red-50/30 to-red-50/10 p-10 sm:p-16 md:p-20 rounded-[2.5rem] border border-red-100/80 shadow-xl shadow-red-950/5 relative overflow-hidden"
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="max-w-2xl mx-auto bg-gradient-to-b from-red-50/20 to-red-50/5 p-5 sm:p-10 rounded-2xl border border-red-100/60 shadow-lg relative overflow-hidden"
       >
         {/* Intimate decorative golden double border */}
-        <div className="absolute inset-4 rounded-[2rem] border border-[#D4AF37]/20 pointer-events-none" />
+        <div className="absolute inset-2.5 rounded-xl border border-[#D4AF37]/15 pointer-events-none" />
 
         <div className="relative z-10 flex flex-col items-center">
           <motion.div
-            animate={{ scale: [1, 1.1, 1] }}
+            animate={{ scale: [1, 1.08, 1] }}
             transition={{ repeat: Infinity, duration: 2 }}
-            className="mb-8 text-red-700"
+            className="mb-4 sm:mb-6 text-red-700"
           >
-            <Heart size={44} className="fill-current" />
+            <Heart size={32} className="fill-current" />
           </motion.div>
 
-          <h3 className="font-amiri text-2xl sm:text-3xl text-center text-[#95002a] font-bold mb-8 select-none">
+          <h3 className="font-amiri text-xl sm:text-2xl text-center text-[#95002a] font-bold mb-4 sm:mb-6 select-none">
             إلى "أمنية" الغالية،
           </h3>
 
-          <p className="font-amiri text-xl sm:text-2xl leading-relaxed text-slate-800 text-center font-medium max-w-2xl select-text">
+          <p className="font-amiri text-lg sm:text-xl leading-relaxed text-slate-800 text-center font-medium max-w-xl select-text px-2 sm:px-4">
             أكتب لكِ هذه الكلمات لأعبر لكِ عن مدى حبي وامتناني لوجودكِ في حياتي. أنتِ لستِ فقط حبيبتي، بل أنتِ موطني وأماني. كل يوم يمر بجانبكِ هو عيد بالنسبة لي. شكراً لأنكِ كنتِ وما زلتِ الشخص الذي يجعل كل شيء جميلاً.
           </p>
 
-          <div className="mt-12 text-center">
-            <span className="font-amiri text-2xl font-bold text-[#95002a] block mb-1">
+          <div className="mt-6 sm:mt-8 text-center">
+            <span className="font-amiri text-lg sm:text-xl font-bold text-[#95002a] block">
               حبيبكِ دائماً
             </span>
-            <div className="w-16 h-0.5 bg-[#D4AF37] mx-auto mt-2 rounded-full" />
+            <div className="w-12 h-0.5 bg-[#D4AF37] mx-auto mt-1.5 rounded-full" />
           </div>
         </div>
       </motion.div>
